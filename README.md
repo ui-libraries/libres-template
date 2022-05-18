@@ -1,3 +1,3 @@
 # Libres template
 
-Why is this not being recognized by github?
+Simple, UI-branded template (header and footer) that can be simply implemented for some pages on Libres.
