@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  
+  .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    overflow-wrap: anywhere;
+
+    #navigation-primary {
+      flex: 0 0 100%;
+      margin: 0 0 0 0;
+      padding: 0;
+    }
+
+    #content-main {
+      flex: 0 0 100%;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  // --- Responsive layouts ------
+  @include breakpoint($medium-width) {
+
+    .content-wrapper {
+
+      #navigation-primary {
+        flex-basis: auto;
+        flex: 3;
+      }
+
+      #content-main {
+        flex-basis: auto;
+        flex: 9;
+      }
+    }
+  }
+  @include breakpoint($fixed-width) {
+
+    .content-wrapper {
+      padding: 0;
+      max-width: $fixed-width;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+#content-main {
+
+  table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    // font-size: 100%;
+    // font: inherit;
+    vertical-align: baseline;
+    // font-family: $font-body-02;
+    @include font-size(1.4);
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  table { 
+    border: 1px #111 solid; 
+    border-collapse: collapse; 
+    font-family: $font-body-01;
+  }
+  table p { 
+    margin: 0; 
+    padding: 0; 
+    @include font-size(1.4);
+    
+    span {
+      @include font-size(1.4);
+    }
+  }
+  table td, table th { 
+    border: 1px #333 solid; 
+    padding: 8px; 
+    font-family: $font-body-01;
+  }
+  table th {
+    background-color: #444;
+    color: white;
+  }
+
+  tr.blue {
+    color: $secondary-blue;
+  }
+}

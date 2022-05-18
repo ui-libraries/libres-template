@@ -1,0 +1,73 @@
+.header-site {
+  margin: 1rem 0;
+  background-image: url('https://heirs.lib.uiowa.edu/images/heirs-banner-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-inner {
+    position: relative;
+    margin: 0 auto;
+    padding: 8rem 0 12rem 0;
+    max-width: $fixed-width;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      transition: 0.2s;
+
+      .title-site {
+        display: inline-block;
+        padding: 2rem 2rem 3rem 2rem;
+        background-color: rgba(black, 0.7);
+
+        h1 {
+          margin: 0;
+          padding: 0;
+          font-family: $font-body-01;
+          @include font-size(6);
+          color: white;
+          text-shadow: 2px 2px 2px black;
+        }
+
+        h2 {
+          margin: 0;
+          padding: 0;
+          font-family: $font-body-01;
+          font-style: italic;
+          font-weight: 400;
+          @include font-size(3);
+          color: white;
+          text-shadow: 2px 2px 2px black;
+        }
+      }
+
+      &:hover {
+        h1, h2 {
+          opacity: 0.8
+        }
+      }
+    }
+  }
+
+
+
+  // ––– BREAKPOINTS BEGIN –––––––––––––––––
+  @include breakpoint($small-width) {
+    // nothing, yet
+  }
+
+  @include breakpoint($medium-width) {
+    // nothing, yet
+  }
+
+  @include breakpoint($large-width) {
+    // nothing, yet
+  }
+  @include breakpoint($fixed-width) {
+    
+    // &-inner {
+    //   max-width: calc($fixed-width + 4rem);
+    // }
+  }
+  // ––– BREAKPOINTS END ––––––––––––––––––––––––––––––––
+}

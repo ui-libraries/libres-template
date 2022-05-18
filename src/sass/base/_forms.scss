@@ -1,0 +1,25 @@
+form {
+
+  input, select {
+    padding: 0.5rem 1rem;
+  }
+  
+  input[type=submit] {
+    margin: 0;
+    padding: 0.5rem 2rem;
+    background-color: $link-standard;
+    border: none;
+    color: color-contrast($link-standard);
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    @include font-size(1.8);
+    font-family: $font-body-01;
+    transition: 0.1s;
+
+    &:hover {
+      background-color: $link-hover;
+      color: color-contrast($link-hover);
+    }
+  }
+}

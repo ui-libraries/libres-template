@@ -1,0 +1,22 @@
+$hawk-gold:          #ffcd00;
+$hawk-black:         #000000;
+$secondary-gray:     #63666a;
+$secondary-blue:     #00558c;
+$secondary-green:    #00664f;
+$secondary-orange:   #bd472a;
+
+// links
+$link-standard:       $secondary-blue;
+$link-hover:          darken($link-standard, 15%);
+
+a, a:visited {
+  color: $link-standard;
+
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+// development and debugging
+$dev-gray:            #F2F2F2;
+$dev-flag-01:         darken(red, 20%);

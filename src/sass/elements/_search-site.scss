@@ -1,0 +1,161 @@
+.search-site {
+  flex: 0 0 100%;
+  margin-top: -10rem;
+  // margin-left: -2rem;
+  // padding: 1rem;
+  // background-color: $dev-gray;
+  z-index: 999;
+
+  &-inner {
+    padding: 2rem;
+    background-color: rgba(black, 0.7);
+
+    form.site-search-form {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; 
+    
+      input {
+        @include font-size(1.8);
+        padding: 0.5rem;
+
+        &.search-text {
+          flex: 6;
+        }
+        &.search-submit {
+          padding: 0.5rem 2rem;
+          flex: 1;
+        }
+      }
+      .advanced-search-link {
+        flex: 2;
+        text-align: right;
+        color: white;
+        font-weight: bold;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+// advancedSearch.php
+.advanced-search-site {
+  margin: 3rem 0;
+
+  label {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: $dev-gray;
+
+    >strong {
+      flex: 0 0 100%;
+    }
+
+    input, select {
+      flex: 0 0 100%;
+    }
+
+    em {
+      flex: 0 0 100%;
+      @include font-size(1.4);
+    }
+  }
+
+  input[type=submit] {
+    margin: 1rem auto;
+    padding: 1rem 4rem;
+    min-width: 200px;
+    width: 50%;
+  }
+
+  @include breakpoint($small-width) {
+  
+    label {
+
+      >strong {
+        flex: 1;
+      }
+
+      input, select {
+        flex: 2;
+      }
+
+      em {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.search-area {
+  margin-top: 3rem;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &--author-letter {
+
+    >ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      justify-content: center;
+
+      >li {
+        flex: 0 1 content;
+        padding: 0;
+        text-align: center;
+        
+        a {
+          margin: 0;
+          padding: 4px 8px;
+          display: block;
+          font-weight: bold;
+          text-decoration: none;
+          background-color: $dev-gray;
+          transition: 0.1s;
+
+          &:hover {
+            background-color: darken($dev-gray, 15%);
+          }
+        }
+      }
+    }
+  }
+
+  &--time-period {
+  
+    >ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      >li {
+        flex: 0 1 content;
+        padding: 1rem;
+        background-color: $dev-gray;
+      }
+
+      @include breakpoint($fixed-width) {
+      
+        >li {
+          flex: 1 1 content;
+        }
+      }
+    }
+  }
+
+}

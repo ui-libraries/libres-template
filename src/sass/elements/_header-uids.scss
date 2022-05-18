@@ -1,0 +1,76 @@
+.header-uids {
+  margin: 0 0 2rem 0;
+  padding: 0;
+  min-height: 50px;
+  background-color: $hawk-gold;
+
+  .uilibraries-branding {
+    display: flex;
+    align-items: center;
+    flex-basis: content;
+    
+    a.block-iowa {
+      margin-right: 10px;
+      padding: 17px 15px 13px 15px;
+      background-color: $hawk-black;
+
+      svg {
+        height: 26px;
+        fill: $hawk-gold;
+
+        path {
+          transition: 0.1s;
+        }
+
+        .block-i {
+          transition-delay: 0.0s;
+        }
+        .block-o {
+          transition-delay: 0.03s;
+        }
+        .block-w {
+          transition-delay: 0.06s;
+        }
+        .block-a {
+          transition-delay: 0.09s;
+        }
+      }
+      &:hover svg {
+
+        path {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    h1.site-name {
+      margin: 0;
+      padding: 0;
+      font-weight: 300;
+      @include font-size(1.8);
+
+      a {
+        font-family: $font-body-02;
+        color: black;
+        text-decoration: none;
+        transition: 0.2;
+
+        &:hover {
+          opacity: 0.8;;
+        }
+      }
+    }
+  }
+
+  // --- Responsive layouts ---
+  &__inner {
+    margin: 0 auto;
+    max-width: $fixed-width;
+    display: flex;
+    justify-content: flex-start;
+
+    @include breakpoint($fixed-width) {
+      height: 50px;
+    }
+  }
+}

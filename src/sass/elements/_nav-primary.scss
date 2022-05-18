@@ -1,0 +1,146 @@
+#navigation-primary {
+
+  // ––– Navigation toggle button BEGIN ––––––––––––
+  .nav-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1rem;
+    padding: 8px;
+    width: 100%;
+    background-color: $link-standard;
+    color: white;
+    border: 0px solid transparent;
+    transition: 0.1s;
+
+    span {
+      @include font-size(1.8);
+      font-weight: bold;
+      text-transform: uppercase;
+
+      svg {
+        fill: white;
+        height: 3rem;
+        width: 3rem;
+        transition: 0.1s;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $link-hover;
+      // color: black;
+
+      // svg {
+      //   fill: black;
+      // }
+    }
+  }
+
+  // --- Responsive layouts ------
+  @include breakpoint($medium-width) {
+
+    .nav-toggle {
+      display: none;
+    }
+    .navigation-site { 
+      display: block; 
+    }
+  }
+
+  &.COLLAPSED {
+
+    .nav-toggle {
+
+      svg {
+        &.close-nav { display: none; }
+        &.hamburger-nav { display: inline-block; }
+      }
+    }
+    .navigation-site { display: none; }
+  }
+  &:not(.COLLAPSED) {
+  
+    .nav-toggle {
+
+      svg {
+        &.close-nav { display: inline-block; }
+        &.hamburger-nav { display: none; }
+      }
+    }
+    .navigation-site { display: block; }
+  }
+  // -----------------------------------
+  // ––– Navigation toggle button END ––––––––––
+
+  ul {
+    margin: 2px 0 1em 0;
+    padding: 0;
+    list-style-type: none;
+
+    >li {
+      margin: .25em 0;
+      padding: 0;
+
+      &.section {
+
+        >strong {
+          display: block;
+          margin: 0;
+          padding: 1rem 0.25em 0.25em 0;
+          @include font-size(1.6);
+          font-weight: 600;
+          color: darken($secondary-gray, 10%);
+        }
+
+        li {
+          margin: 2px 0;
+        }
+
+        &--edit {
+          margin-top: 2rem;
+
+          // li a.iconify--login {
+          //   color: #900;
+
+          //   &:hover {
+          //     color: #090;
+          //   }
+          // }
+        }
+      }
+    
+      a {
+        display: block;
+        margin: 0;
+        padding: 0.5em 1em;
+        background-color: $link-standard;
+        color: color-contrast($link-standard);
+        text-transform: capitalize;
+        text-decoration: none;
+        transition: 0.1s;
+        font-family: $font-body-01;
+        @include font-size(1.6);
+        font-weight: 300;
+
+        &:hover {
+          background-color: $link-hover;
+          color: color-contrast($link-hover);
+          text-decoration: none;
+        }
+      }
+
+      ul {
+        margin: 0;
+
+        li {
+        
+           a {
+            padding: 0.5em 0.5em 0.5em calc(1em - 2px);
+           }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+
+// Set rem font sizing.
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin hide-offscreen {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  height: 1px;
+  overflow: hidden;
+  width: 1px;
+}
+@mixin show-onscreen {
+  position: inherit;
+  height: auto;
+  overflow: inherit;
+  width: auto;
+  left: auto;
+  top: auto;
+}
+
+@mixin hover-dim {
+  text-decoration: none;
+  transition: 0.2;
+
+  &:hover {
+    opacity: 0.8;;
+  }
+}
+
+@mixin dev-placeholder {
+  margin: 0;
+  padding: 0.5rem;
+  width: 100%;
+  background: repeating-linear-gradient(-45deg,#ffe166,#ffe166 10px,#ffd733 10px,#ffd733 20px);
+  font-weight: bold;
+}
+
+@mixin simple-button($bg-color: $link-standard, $text_color: white) {
+  $bg-color-hover: lighten($bg-color, 10%);
+  $bg-color-active: saturate($bg-color, 15%);
+  display: inline-block;
+  padding: 1rem 2rem;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none !important;
+  font-family: inherit;
+  transition: 0.1s;
+  font-weight: normal;
+  background-color: $bg-color;
+  color: color-contrast($bg-color) !important; // needed to override link colors
+  border: none;
+  line-height: 1.5em;
+
+  &:link {
+    color: color-contrast($bg-color) !important; // needed to override link colors
+  }
+
+  &:hover {
+    text-decoration: none;
+    background-color: $bg-color-hover;
+    color: color-contrast($bg-color-hover);
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+    background-color: $bg-color-active;
+    color: color-contrast($bg-color-active);
+  }
+
+  &:focus {
+    outline: 2px solid $link-standard;
+  }
+
+  // i {
+  //   margin-right: 0.333em;
+  // }
+}
