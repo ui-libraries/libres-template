@@ -23,16 +23,17 @@
     mask-position: 50% 50%;
   }
 
-  &--home:before { mask-image: url('/images/icons/house-chimney-window.svg'); }
-  &--login:before { mask-image: url('/images/icons/right-to-bracket.svg'); }
-  &--new:before { mask-image: url('/images/icons/square-plus.svg'); }
-  &--edit:before { mask-image: url('/images/icons/square-pen.svg'); }
-  &--logout:before { mask-image: url('/images/icons/right-from-bracket.svg'); }
-  &--image:before { mask-image: url('/images/icons/image.svg'); }
-  &--list:before { mask-image: url('/images/icons/rectangle-list.svg'); }
-  &--print:before { mask-image: url('/images/icons/print.svg'); }
-  &--search:before { mask-image: url('/images/icons/magnifying-glass.svg'); }
+  // &--home:before { mask-image: url('/images/icons/house-chimney-window.svg'); }
+  // &--login:before { mask-image: url('/images/icons/right-to-bracket.svg'); }
+  // &--new:before { mask-image: url('/images/icons/square-plus.svg'); }
+  // &--edit:before { mask-image: url('/images/icons/square-pen.svg'); }
+  // &--logout:before { mask-image: url('/images/icons/right-from-bracket.svg'); }
+  // &--image:before { mask-image: url('/images/icons/image.svg'); }
+  // &--list:before { mask-image: url('/images/icons/rectangle-list.svg'); }
+  // &--print:before { mask-image: url('/images/icons/print.svg'); }
+  // &--search:before { mask-image: url('/images/icons/magnifying-glass.svg'); }
 
-  // TEMP: development use
-  &--flag:before { mask-image: url('/images/icons/flag.svg'); }
+  &--download:before { mask-image: url('/images/icons/cloud-arrow-down.svg'); }
+
+  // &--flag:before { mask-image: url('/images/icons/flag.svg'); }
 }

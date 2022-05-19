@@ -1,7 +1,7 @@
 // ––– Google fonts
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Zilla+Slab:ital,wght@0,300;0,600;1,300;1,600&display=swap');
 
-$font-body-01:     'Lora', serif;
+$font-body-01:     'Roboto', serif;
 $font-body-02:     'Roboto', sans-serif;
 $font-header-01:   'Zilla Slab', serif;
 
@@ -24,7 +24,7 @@ body, p, ul {
 #content-main {
 
 	h1, h2, h3, h4, h5 {
-		font-family: $font-body-01;
+		font-family: $font-header-01;
 		font-weight: bold;
 	}
 

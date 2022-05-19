@@ -47,7 +47,7 @@
   font-weight: bold;
 }
 
-@mixin simple-button($bg-color: $link-standard, $text_color: white) {
+@mixin simple-button($bg-color: $hawk-gold, $text_color: black) {
   $bg-color-hover: lighten($bg-color, 10%);
   $bg-color-active: saturate($bg-color, 15%);
   display: inline-block;
